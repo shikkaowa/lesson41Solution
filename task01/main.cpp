@@ -1,20 +1,19 @@
-//#include <iostream>
-//#define NUM_OF_STUDENTS 3.0
-//
-//
-//using namespace std;
-//
-//int main() {
-//	
-//	double first_student, second_student, third_student;
-//
-//	double avg;
-//	cout << "input all students marks: ";
-//	cin >> first_student; cin >> second_student; cin >> third_student;
-//
-//	double avg = (first_student + second_student + third_student) / NUM_OF_STUDENTS;
-//
-//	cout << "averege score is: ";
-//	cout << avg;
-//	return 0;
-//}
+#include <iostream>
+using namespace std;
+int main() {
+	const int MARK_COUNT = 3;
+	int marks[MARK_COUNT];
+	cout << "Input students marks:";
+	for (int index = 0; index < MARK_COUNT; index++)
+	{
+		cin >> marks[index];
+	}
+	double avg = 0;
+	for (int index = 0; index < MARK_COUNT ; index++)
+	{
+		avg += marks[index];
+	}
+	
+		cout << "Avg result is" << avg / MARK_COUNT << endl;
+		return 0;
+}
